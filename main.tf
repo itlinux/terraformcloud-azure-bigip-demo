@@ -1,17 +1,5 @@
 # Main
 
-terraform {
-  backend "remote" {
-    # The name of your Terraform Cloud organization.
-    organization = "vinnief5dev"
-
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "terraformcloud-azure-bigip-demo-github"
-    }
-  }
-}
-
 # Azure Provider
 provider "azurerm" {
   features {}
