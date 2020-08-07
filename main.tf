@@ -7,7 +7,7 @@ terraform {
 
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
-      name = "terraformcloud-azure-bigip-demo"
+      name = "terraformcloud-azure-bigip-demo-github"
     }
   }
 }
