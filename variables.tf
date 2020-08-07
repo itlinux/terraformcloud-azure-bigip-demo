@@ -1,7 +1,4 @@
 # Variables
-# terraform
-variable terraformOrg { description = "your tf cloud org" }
-variable terraformWorkspace { description = "your tf cloud workspace" }
 
 # REST API Setting
 variable rest_do_uri { default = "/mgmt/shared/declarative-onboarding" }

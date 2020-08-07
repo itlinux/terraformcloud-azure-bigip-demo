@@ -3,11 +3,11 @@
 terraform {
   backend "remote" {
     # The name of your Terraform Cloud organization.
-    organization = var.terraformOrg
+    organization = "vinnief5dev"
 
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
-      name = var.terraformWorkspace
+      name = "terraformcloud-azure-bigip-demo"
     }
   }
 }
