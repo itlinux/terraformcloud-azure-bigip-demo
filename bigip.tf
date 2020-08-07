@@ -168,7 +168,7 @@ resource "azurerm_network_security_group" "main" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
-  
+
   security_rule {
     name                       = "allow_JUMP_RDP"
     description                = "Allow RDP access"
@@ -341,7 +341,7 @@ data "template_file" "vm_onboard" {
     AS3_URL        = var.AS3_URL
     TS_URL         = var.TS_URL
     CF_URL         = var.CF_URL
-    FAST_URL         = var.FAST_URL
+    FAST_URL       = var.FAST_URL
     libs_dir       = var.libs_dir
     onboard_log    = var.onboard_log
     mgmt_gw        = var.mgmt_gw
@@ -402,7 +402,7 @@ data "template_file" "as3_json" {
 }
 
 data "template_file" "ts_json" {
-  template   = file("${path.module}/ts.json")
+  template = file("${path.module}/ts.json")
 
   vars = {
     region      = var.location
@@ -600,10 +600,10 @@ resource "local_file" "vm_as3_file" {
 }
 
 data template_file as3_2_json {
-    template = file("${path.module}/mgmt.json.tpl")
-  vars ={
-      uuid = "1234"
-      exampleVipAddress = var.f5vm01ext
+  template = file("${path.module}/mgmt.json.tpl")
+  vars = {
+    uuid              = "1234"
+    exampleVipAddress = var.f5vm01ext
   }
 }
 resource local_file vm_as3_2_file {

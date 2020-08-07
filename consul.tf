@@ -35,7 +35,7 @@ data "template_file" "consul_onboard" {
   template = file("${path.module}/consul-onboard.sh.tpl")
 
   vars = {
-    CONSUL_VERSION     = "1.7.2"
+    CONSUL_VERSION = "1.7.2"
   }
 }
 
